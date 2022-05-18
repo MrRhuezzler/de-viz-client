@@ -67,7 +67,7 @@ const BarPlot = ({ Data, Options }) => {
     }, [data, chart]);
 
     return (
-        <canvas ref={canvasRef} id="myChart" className="w-full h-full"></canvas>
+        <canvas ref={canvasRef} className="w-full h-full"></canvas>
     );
 
 }

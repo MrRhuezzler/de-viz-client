@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import _ from "lodash";
 import { Responsive, WidthProvider } from "react-grid-layout";
-import BarPlot from "./Plots";
+import BarPlot from "./RechartsPlots";
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
 export const generateLayout = () => {
@@ -20,8 +20,15 @@ export const generateLayout = () => {
 
 const DashboardComponent = (props) => {
 
+    const dash = useRef(null);
+
+    useEffect(() => {
+        console.log("ASDS", dash.current);
+        console.log("SDADS", dash.current);
+    }, [dash]);
+
     return (
-        <div><BarPlot></BarPlot></div>
+        <div ref={dash} className="w-full h-full"><BarPlot></BarPlot></div>
     );
 
 }
@@ -74,7 +81,7 @@ const Dashboard = (props) => {
     }
 
     return (
-        <div className="h-full bg-[#eff1f5]">
+        <div className="h-full bg-white-smoke">
             <ResponsiveReactGridLayout
                 {...props}
                 layouts={layouts}
