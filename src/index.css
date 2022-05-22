@@ -14,6 +14,7 @@
 .react-grid-item {
     transition: all 200ms ease;
     transition-property: left, top;
+    overflow: hidden;
 }
 
 .react-grid-item.cssTransforms {
@@ -32,7 +33,8 @@
 }
 
 .react-grid-item.react-grid-placeholder {
-    background: red;
+    background: var(--accent) !important;
+    border-radius: 0.5rem;
     opacity: 0.2;
     transition-duration: 100ms;
     z-index: 2;
@@ -100,4 +102,60 @@
     cursor: grab;
     cursor: -moz-grab;
     cursor: -webkit-grab;
+}
+
+.alto {
+    --accent: #175E54
+}
+
+.verde {
+    --accent: #279989
+}
+
+.olive {
+    --accent: #8F993E
+}
+
+.bay {
+    --accent: #6FA287
+}
+
+.sky {
+    --accent: #4298B5
+}
+
+.lagunita {
+    --accent: #007C92
+}
+
+.poppy {
+    --accent: #E98300
+}
+
+.spirited {
+    --accent: #E04F39
+}
+
+.illuminating {
+    --accent: #FEDD5C
+}
+
+.plum {
+    --accent: #620059
+}
+
+.brick {
+    --accent: #651C32
+}
+
+.archway {
+    --accent: #5D4B3C
+}
+
+.stone {
+    --accent: #7F7776
+}
+
+.fog {
+    --accent: #DAD7CB
 }
