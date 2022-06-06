@@ -19,7 +19,7 @@ const Register = () => {
                 <p className="font-mont text-lg w-full mb-5 text-center text-gray-400">Register</p>
                 <div className="font-mont font-bold text-4xl text-center w-full">de-<img src={Logo} className="h-20 inline" />iz</div>
                 <div className="mt-14">
-                    <form action="" className="flex flex-col space-y-7">
+                    <form action="" className="flex flex-col space-y-6">
                         <TextField
                             text="Email"
                             placeholder="Enter email"
@@ -39,6 +39,7 @@ const Register = () => {
                             valueState={[confirmPassword, setConfirmPassword]}
                             error={error}
                         />
+                        <button className='px-3 py-2 bg-bluz'>Register</button>
                     </form>
                     <div className='mt-6'>
                         {error && errorList.map((value, index) => (

@@ -18,7 +18,11 @@ const Navbar = () => {
                     <img src={Logo} className="h-full inline aspect-square" />
                 </div>
                 <div className='flex flex-row justify-end items-center space-x-2 grow'>
-                    <div className='flex flex-row items-center space-x-2'>
+                    {/* <div className='flex flex-row space-x-3 justify-start grow'> */}
+                        <Link to="/login">Login</Link>
+                        <Link to="/register">Register</Link>
+                    {/* </div> */}
+                    {/* <div className='flex flex-row items-center space-x-2'>
                         <p>MrRhuezzler</p>
                         <div className='relative'>
                             <button><VscTriangleDown onClick={(e) => { setDropped(!dropped) }} /></button>
@@ -29,7 +33,7 @@ const Navbar = () => {
                                 </div>
                             </div>}
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

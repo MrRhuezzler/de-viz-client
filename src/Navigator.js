@@ -9,7 +9,7 @@ const Navigator = () => {
         <>
             <div className="flex flex-col h-full">
                 <Navbar></Navbar>
-                <div className="grow">
+                <div className="grow py-5">
                     <Routes>
                         <Route path="/" element={<Home></Home>} />
                         <Route path="/register" element={<Register></Register>} />
