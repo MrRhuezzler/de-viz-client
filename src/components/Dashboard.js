@@ -100,7 +100,7 @@ const DashboardParent = (props) => {
     const generateDOM = () => {
         return _.map(layout[currentBreakpoint], (l, i) => {
             return (
-                <div className="rounded-lg" key={i}>
+                <div className="rounded-lg shadow-md" key={i}>
                     <DashboardComponent layoutItem={l}></DashboardComponent>
                 </div>
             );
@@ -124,13 +124,14 @@ const DashboardParent = (props) => {
     }
 
     return (
-        // <div className="bg-white-smoke h-fit">
+        <div className="bg-white-smoke h-full">
             <ResponsiveReactGridLayout
                 className={`layout ${currBackgroundColor}`}
                 // style={{ height: null }}
                 {...props}
                 layouts={layout}
                 onDrag={(layouts, oldItem, newItem, placeholder, event, element) => { setCurrBackgroundColor(options.find(e => e.i === newItem.i).accentColor) }}
+                onResize={(layouts, oldItem, newItem, placeholder, event, element) => { setCurrBackgroundColor(options.find(e => e.i === newItem.i).accentColor) }}
                 onBreakpointChange={onBreakpointChange}
                 onLayoutChange={onLayoutChange}
                 measureBeforeMount={false}
@@ -140,7 +141,7 @@ const DashboardParent = (props) => {
             >
                 {generateDOM()}
             </ResponsiveReactGridLayout>
-        // </div >
+        </div >
     );
 }
 

@@ -2,7 +2,7 @@ import Dashboard from "../components/Dashboard";
 
 const Home = () => {
     return (
-        <div className="home">
+        <div className="home h-full">
             <Dashboard
                 rowHeight={25}
                 onLayoutChange={() => { }}
