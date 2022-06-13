@@ -7,7 +7,13 @@ const colors = {
     "white-smoke": "#F8F8F8",
     "slate": "#C0C2C9",
     "bluz": "#2eaeff",
-    "pinkz": "#e27396",
+    "pinkz": {
+      "50" : "#f9e3ea",
+      "100" : "#f2bfcf",
+      "200" : "#ea9ab3",
+      "500" : "#e27598",
+      "800" : "#db507c"
+    },
   },
   ...accentColors
 }

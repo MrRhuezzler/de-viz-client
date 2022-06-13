@@ -11,7 +11,7 @@ const Inputbox = ({ valueState, error, type, text, placeholder, children }) => {
                 <label className="font-mont text-gray-600">{text}</label>
                 {children}
             </div>
-            <input type={type} placeholder={placeholder} value={value} onChange={(e) => { setValue(e.target.value); }} className={`font-robo px-4 py-2 block rounded-md mt-3 w-full outline-none border-2 focus:border-bluz ${error ? 'border-pinkz' : value ? 'border-bluz' : 'border-gray-400'}`} />
+            <input type={type} placeholder={placeholder} value={value} onChange={(e) => { setValue(e.target.value); }} className={`font-robo px-4 py-2 block rounded-md mt-3 w-full outline-none border-2 focus:border-bluz ${error ? 'border-pinkz-500' : value ? 'border-bluz' : 'border-gray-400'}`} />
         </div>
     )
 }
